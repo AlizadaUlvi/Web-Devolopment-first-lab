@@ -282,3 +282,41 @@ body.dark-mode .interest ul li {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
 }
+.add-skill-form {
+  margin-top: 20px;
+}
+.add-skill-form input {
+  margin: 5px 0;
+  padding: 5px;
+  width: 200px;
+  display: block;
+}
+.add-skill-form button {
+  padding: 5px 10px;
+  background-color: #03a9f4;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.add-experience-form,
+.add-education-form {
+    margin-top: 20px;
+}
+
+.add-experience-form input,
+.add-education-form input {
+    margin: 5px 0;
+    padding: 5px;
+    width: 250px;
+    display: block;
+}
+
+.add-experience-form button,
+.add-education-form button {
+    padding: 5px 10px;
+    background-color: #03a9f4;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
