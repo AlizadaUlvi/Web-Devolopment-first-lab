@@ -70,7 +70,9 @@
                 <input type="text" id="eduSchool" placeholder="School">
                 <input type="text" id="eduYear" placeholder="Year">
                 <button onclick="addEducation()">Add</button>
+                <button onclick="toggleSection('contactInfo education')">Toggle</button> <!-- BUNU ƏLAVƏ ET -->
             </div>
+            
              
             <div class = "contactInfo language">
                 <h3 class title>Languages</h3>
@@ -99,7 +101,7 @@
             </div>
         </div>
         <div class ="right-side">
-            <div class="about">
+            <div class="about experience">
                 <h2 class="title2">Profile</h2>
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -122,14 +124,19 @@
                     </div>
 
                 </div>
-                <form id="experience-form" style="margin-top: 20px;">
+                <div id="experience-list"></div>
+
+                <div class="add-experience-form">
                     <input type="text" id="years" placeholder="Years" required />
                     <input type="text" id="company" placeholder="Company Name" required />
                     <input type="text" id="position" placeholder="Position" required />
                     <textarea id="description" placeholder="Short Description" required></textarea>
-                    <button type="submit">Add Experience</button>
-                </form>
+                    <button onclick="addExperience()">Add</button>
+                    <button onclick="toggleSection('about experience')">Toggle</button>
+                </div>
+                
             </div>
+            
             
 
               
@@ -177,11 +184,9 @@
                 <input type="text" id="skillName" placeholder="Ability name">
                 <input type="number" id="skillPercent" placeholder="Percent (%)" min="0" max="100">
                 <button onclick="addSkill()">Add</button>
+                <button onclick="toggleSection('about skills')">Toggle</button>
             </div>
-            <div class="exp-buttons">
-                <button onclick="toggleSection('about')">Toggle</button>
-                <button onclick="addExperience()">Add</button>
-            </div>
+            
               
 
             <div class="about interest">
