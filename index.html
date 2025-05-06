@@ -14,7 +14,7 @@
         <div class ="left-side">
             <div class="ProfileText">
                 <div class="imgbx">
-                    <img src="https://github.com/AlizadaUlvi/Web-Devolopment-first-lab/blob/e5d41923b1d5fefc02497c4064b2dce85c8c042e/images.jpg">
+                    <img src="images.jpg" alt="Profile photo">
                 </div>
                     
                 <h2>Alizada Ulvi<br><span>Web Devoloper</span></h2>
@@ -64,7 +64,14 @@
                     </li>
                 </ul>
             </div>
-
+            <div class="add-education-form">
+                <h3>Add education</h3>
+                <input type="text" id="eduTitle" placeholder="Faculty">
+                <input type="text" id="eduSchool" placeholder="School">
+                <input type="text" id="eduYear" placeholder="Year">
+                <button onclick="addEducation()">Add</button>
+            </div>
+             
             <div class = "contactInfo language">
                 <h3 class title>Languages</h3>
                 <ul>
@@ -115,7 +122,17 @@
                     </div>
 
                 </div>
+                <form id="experience-form" style="margin-top: 20px;">
+                    <input type="text" id="years" placeholder="Years" required />
+                    <input type="text" id="company" placeholder="Company Name" required />
+                    <input type="text" id="position" placeholder="Position" required />
+                    <textarea id="description" placeholder="Short Description" required></textarea>
+                    <button type="submit">Add Experience</button>
+                </form>
             </div>
+            
+
+              
             <div class="about skills">
                 <h2 class="title2">Professional Skills</h2>
                 <div class="box">
@@ -155,6 +172,18 @@
                     </div>
                 </div>
             </div>
+            <div class="add-skill-form">
+                <h3>Add new talent</h3>
+                <input type="text" id="skillName" placeholder="Ability name">
+                <input type="number" id="skillPercent" placeholder="Percent (%)" min="0" max="100">
+                <button onclick="addSkill()">Add</button>
+            </div>
+            <div class="exp-buttons">
+                <button onclick="toggleSection('about')">Toggle</button>
+                <button onclick="addExperience()">Add</button>
+            </div>
+              
+
             <div class="about interest">
                 <h2 class="title2">Interest</h2>
                 <ul>
