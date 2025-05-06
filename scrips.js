@@ -1,3 +1,4 @@
+
 function toggleSection(sectionClass) {
     const sectionEl = document.querySelector(`.${sectionClass.split(' ').join('.')}`);
     if (sectionEl) {
@@ -18,21 +19,41 @@ function addEducation() {
 }
 
 function addExperience() {
-    const container = document.querySelector('.about:nth-of-type(2)');
-    const newBox = document.createElement('div');
-    newBox.classList.add('box');
-    newBox.innerHTML = `
+    let years = document.getElementById("years").value;
+    let company = document.getElementById("company").value;
+    let position = document.getElementById("position").value;
+    let description = document.getElementById("description").value;
+
+    if (!years || !company || !position || !description) {
+        alert("Please fill blanks corecctly.");
+        return;
+    }
+
+    let container = document.getElementById("experience-list");
+
+    let box = document.createElement("div");
+    box.className = "box";
+    box.innerHTML = `
         <div class="year_Company">
-            <h5>YYYY - YYYY</h5>
-            <h5>Company Name</h5>
+            <h5>${years}</h5>
+            <h5>${company}</h5>
         </div>
         <div class="text">
-            <h4>Job Title</h4>
-            <p>Description goes here...</p>
+            <h4>${position}</h4>
+            <p>${description}</p>
         </div>
     `;
-    container.appendChild(newBox);
+
+    container.appendChild(box);
+
+ 
+    document.getElementById("years").value = "";
+    document.getElementById("company").value = "";
+    document.getElementById("position").value = "";
+    document.getElementById("description").value = "";
 }
+
+
 
 function addSkill() {
     const container = document.querySelector('.about.skills');
@@ -51,7 +72,7 @@ function addSkill() {
     const percent = document.getElementById('skillPercent').value;
 
     if (!name || percent < 0 || percent > 100) {
-        alert("Düzgün məlumat daxil edin.");
+        alert("Add right information.");
         return;
     }
 
@@ -118,6 +139,10 @@ function addEducation() {
         </div>
     `;
     container.appendChild(newDiv);
+    if (!name || percent < 0 || percent > 100) {
+        alert("Add information correctly.");
+        return;
+    }
 
   
     document.getElementById("eduTitle").value = "";
